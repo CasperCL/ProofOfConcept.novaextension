@@ -1,0 +1,25 @@
+{
+    "identifier": "unofficial.ProofOfConcept",
+    "name": "Proof of concept",
+    "organization": "Unofficial",
+    "description": "Proof of concept exposing bugs in Nova extension lib.",
+    "version": "0.3",
+    "categories": [ "issues" ],
+    "main": "main.js",
+    "activationEvents": [
+        "onLanguage:python"
+    ],
+    "issueMatchers": {
+        "flake8": {
+            "pattern": {
+                "regexp": "^(.*\\.py):([0-9]+):([0-9]+):\\s([A-Z0-9]+)\\s(.*)",
+                "message": 5,
+                "code": 4,
+                "file": 1,
+                "line": 2,
+                "column": 3,
+                "severity": "error"
+            }
+        }
+    }
+}
